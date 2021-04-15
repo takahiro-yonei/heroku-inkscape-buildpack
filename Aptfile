@@ -1,0 +1,7 @@
+harfbuzz
+pangocairo
+pangoft2
+fontconfig
+gsl
+gmodule-2.0
+libsoup-2.4

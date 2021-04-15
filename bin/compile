@@ -2,13 +2,14 @@
 
 BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
-mkdir -p "$BUILD_DIR/.intltool"
-cd "$BUILD_DIR/.intltool"
-wget http://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
-tar -xf intltool-0.51.0.tar.gz
-cd intltool-0.51.0
-./configure
-make
+
+# mkdir -p "$BUILD_DIR/.intltool"
+# cd "$BUILD_DIR/.intltool"
+# wget http://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
+# tar -xf intltool-0.51.0.tar.gz
+# cd intltool-0.51.0
+# ./configure
+# make
 
 # inkscape
 mkdir -p "$BUILD_DIR/.inkscape/"
