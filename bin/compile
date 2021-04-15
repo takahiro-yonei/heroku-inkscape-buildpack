@@ -12,6 +12,9 @@ CACHE_DIR=${2:-}
 # make
 
 # inkscape
+wget -v https://gitlab.com/inkscape/inkscape-ci-docker/-/raw/master/install_dependencies.sh -O install_dependencies.sh
+bash install_dependencies.sh --recommended
+
 mkdir -p "$BUILD_DIR/.inkscape/"
 cd "$BUILD_DIR/.inkscape/"
 wget https://inkscape.org/en/gallery/item/23820/inkscape-1.0.2.tar.xz
@@ -20,7 +23,7 @@ cd inkscape-1.0.2_2021-01-15_e86c870879
 
 mkdir build
 cd build
-cmake ..
+cmake .. -DCMAKE_INSTALL_PREFIX=${PWD}/install_dir -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
 make
 make install
 
